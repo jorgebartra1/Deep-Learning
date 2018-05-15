@@ -1,8 +1,8 @@
-# Replay Buffer
-# Most modern reinforcement learning algorithms benefit from using a replay memory or buffer to store and recall experience tuples.
-# Here is a sample implementation of a replay buffer that you can use:
-# import random
-# from collections import namedtuple, deque
+### Replay Buffer
+### Most modern reinforcement learning algorithms benefit from using a replay memory or buffer to store and recall experience tuples.
+### Here is a sample implementation of a replay buffer that you can use:
+### import random
+### from collections import namedtuple, deque
 
 class ReplayBuffer:
     """Fixed-size buffer to store experience tuples."""
