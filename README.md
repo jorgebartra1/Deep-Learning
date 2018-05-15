@@ -61,7 +61,6 @@ class DDPG():
         action = self.actor_local.model.predict(state)[0]
         return list(action + self.noise.sample())  # add some noise for exploration
 
-<span style="color:blue">
    def learn(self, experiences):
         """Update policy and value parameters using given batch of experience tuples."""
         # Convert experience tuples to separate arrays for each element (states, actions, rewards, etc.)
@@ -87,7 +86,7 @@ class DDPG():
         # Soft-update target models
         self.soft_update(self.critic_local.model, self.critic_target.model)
         self.soft_update(self.actor_local.model, self.actor_target.model)   
-</span>
+
     def soft_update(self, local_model, target_model):
         """Soft update model parameters."""
         local_weights = np.array(local_model.get_weights())
