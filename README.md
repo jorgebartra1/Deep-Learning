@@ -1,6 +1,4 @@
 # DDPG: Agent
-We are now ready to put together the actor and policy models to build our DDPG agent. Note that we will need two copies of each model - one local and one target. This is an extension of the "Fixed Q Targets" technique from Deep Q-Learning, and is used to decouple the parameters being updated from the ones that are producing target values.
-Here is an outline of the agent class:
 class DDPG():
     """Reinforcement Learning agent that learns using DDPG."""
     def __init__(self, task):
@@ -61,7 +59,7 @@ class DDPG():
         action = self.actor_local.model.predict(state)[0]
         return list(action + self.noise.sample())  # add some noise for exploration
 
-   def learn(self, experiences):
+    def learn(self, experiences):
         """Update policy and value parameters using given batch of experience tuples."""
         # Convert experience tuples to separate arrays for each element (states, actions, rewards, etc.)
         states = np.vstack([e.state for e in experiences if e is not None])
