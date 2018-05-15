@@ -62,7 +62,7 @@ class DDPG():
         return list(action + self.noise.sample())  # add some noise for exploration
 
 ```
-   + this will be highlighted in green
+   color.Blue
    def learn(self, experiences):
         """Update policy and value parameters using given batch of experience tuples."""
         # Convert experience tuples to separate arrays for each element (states, actions, rewards, etc.)
